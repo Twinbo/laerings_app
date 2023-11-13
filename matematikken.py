@@ -16,36 +16,48 @@ print()
 #math thing
 
 #+
-print("plus stykke",random_number,"+",random_number2)
-svar = int(input())
-if svar == random_number+random_number2:
-    print("Det er rigtigt, Godt gået")
-if svar != random_number+random_number2:
-    print("Prøv igen")
-svar = int(input())
-if svar == random_number+random_number2:
-    print("Det er rigtigt, godt gået")
-else:
-    print("svaret er forkert, det rigtige svar var", random_number+random_number2)
+class plus:
+    print("plus stykke",random_number,"+",random_number2)
+    svar = int(input())
+    if svar == random_number+random_number2:
+        print("Det er rigtigt, Godt gået")
+    if svar != random_number+random_number2:
+        print("Prøv igen")
+    svar = int(input())
+    if svar == random_number+random_number2:
+        print("Det er rigtigt, godt gået")
+    else:
+        print("svaret er forkert, det rigtige svar var", random_number+random_number2)
 
 #-
-print("minus stykke",random_number,"-",random_number2)
-print(random_number-random_number2)
-print()
+class minus:
+    print("minus stykke",random_number,"-",random_number2)
+    svar = int(input())
+    if svar == random_number-random_number2:
+        print("Det er rigtigt, Godt gået")
+    if svar != random_number-random_number2:
+        print("Prøv igen")
+    svar = int(input())
+    if svar == random_number-random_number2:
+        print("Det er rigtigt, godt gået")
+    else:
+     print("svaret er forkert, det rigtige svar var", random_number-random_number2)
 
 #*
-print("gange stykke",random_number,"*",random_number2)
-print(random_number*random_number2)
-print()
+class gange:
+    print("gange stykke",random_number,"*",random_number2)
+    svar = int(input())
+    if svar == random_number*random_number2:
+        print("Det er rigtigt, Godt gået")
+    if svar != random_number*random_number2:
+        print("Prøv igen")
+    svar = int(input())
+    if svar == random_number*random_number2:
+     print("Det er rigtigt, godt gået")
+    else:
+     print("svaret er forkert, det rigtige svar var", random_number*random_number2)
 
 print("slut")
 #test
 
-x = int(input())
-if x == 7:
-    tallet_er_lig_med_7 = True
-    print(tallet_er_lig_med_7)
-else:
-    tallet_var_lig_med_7 = False
-    print(tallet_var_lig_med_7) 
 
