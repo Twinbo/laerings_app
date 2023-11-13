@@ -31,3 +31,5 @@ print()
 
 print("slut")
 #test
+
+print((0.0043%23052))
