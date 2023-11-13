@@ -2,6 +2,7 @@
 
 import tkinter as LP
 from tkinter import ttk
+import random
 
 def CreateWindow1():
     Add_Window1 = LP.Toplevel()
@@ -10,6 +11,28 @@ def CreateWindow1():
     LP.Label(Add_Window1,text="Plus regnestykker", font=('Arial',24 )).pack(padx=10,pady=60)
     LP.Text(Add_Window1, height=1, width=30,font=('Arial',16)).pack(pady=10)
   
+    # random number 1
+    random_number = random.randint(1, 20)
+    print("første nummer =", random_number)
+
+    # random number 2
+    random_number2 = random.randint(1, 20)
+    print("anden nummer =", random_number2)
+
+    print()
+
+    print("Plus stykke", random_number, "+", random_number2)
+    user_answer = int(input())
+    if user_answer == random_number + random_number2:
+         print("Det er rigtigt, Godt gået")
+    else:
+        print("Prøv igen")
+        user_answer = int(input())
+        if user_answer == random_number + random_number2:
+            print("Det er rigtigt, Godt gået")
+        else:
+            print("Svaret er forkert, det rigtige svar var", random_number + random_number2)
+    
 
 def CreateWindow2():
     Add_Window2 = LP.Toplevel()
