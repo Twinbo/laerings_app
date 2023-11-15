@@ -1,7 +1,7 @@
 #laering program 
 
 import tkinter as LP
-from tkinter import ttk
+from tkinter import *
 import random
 
 def CreateWindow1():
@@ -9,21 +9,6 @@ def CreateWindow1():
     Add_Window1.title('Addition')
     Add_Window1.geometry("800x500")
 
-    def display_p():
-        global entry
-        inputP = entry.get()
-        labelPPP.configure(text=inputP)
-    
-    labelPPP=LP.Label(Add_Window1,text="",font=('Arial',24 )).pack(padx=10,pady=10)
-    
-    entry = LP.Entry(Add_Window1, width=40).pack(padx=10,pady=10)
-    entry.focus_set()
-   
-    LP.Button(Add_Window1, text="Godkend", width=20, command= display_p(entry)).pack(pady=20)
-
-
-    LP.Label(Add_Window1,text="Plus regnestykker", font=('Arial',24 )).pack(padx=10,pady=26)
-  
     # random number 1
     random_number = random.randint(1, 20)
     print("første nummer =", random_number)
@@ -31,28 +16,23 @@ def CreateWindow1():
     random_number2 = random.randint(1, 20)
     print("anden nummer =", random_number2)
 
-    LP.Label(Add_Window1, text=(random_number, "+", random_number2), font=('Arial',44)).pack(padx=10,pady=26)
-    inputA = LP.Text(Add_Window1, height=1, width=30,font=('Arial',16)).pack(pady=26)
+    LP.Label(Add_Window1, text=(random_number, "+", random_number2), font=('Arial',44)).pack(padx=10,pady=20)
 
-    print("Plus stykke", random_number, "+", random_number2)
-        
-    user_answer = inputA
+    E1 = LP.Entry(Add_Window1,font=('Arial',44),width=8)
+    E1.pack(padx=10,pady=10)
 
-    if user_answer == random_number + random_number2:
-         print("Det er rigtigt, Godt gået")
-    else:
-        print("Prøv igen")
+    def C1():
+        user_svar = int(E1.get())
+        print(user_svar)
 
-    user_answer = inputA
+        if user_svar == random_number + random_number2:
+            print("Det er rigtigt, Godt gået1")
 
-    if user_answer == random_number + random_number2:
-        print("Det er rigtigt, Godt gået")
-    else:
-        print("Svaret er forkert, det rigtige svar var", random_number + random_number2)
-    print("lol im a cat")
-    LP.Label(Add_Window1,text="Plus regnestykker IGEN", font=('Arial',24 )).pack(padx=10,pady=10)
+        else:
+            print("Svaret er forkert, det rigtige svar var", random_number + random_number2)
 
-
+    B1 = LP.Button(Add_Window1, text="Tjek", font=('Arial', 20), command=C1).pack(padx=10, pady=20)
+   
 def CreateWindow2():
     Add_Window2 = LP.Toplevel()
     Add_Window2.title('Subtraktion')
