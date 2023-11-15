@@ -17,13 +17,13 @@ print()
 
 # +
 print("Plus stykke",random_number, "+",random_number2)
-user_answer = int(input())
-if user_answer == random_number + random_number2:
+svar = int(input())
+if svar == random_number + random_number2:
     print("Det er rigtigt, Godt gået")
 else:
     print("Prøv igen")
-user_answer = int(input())
-if user_answer == random_number + random_number2:
+svar = int(input())
+if svar == random_number + random_number2:
     print("Det er rigtigt, godt gået")
 else:
     print("Svaret er forkert, det rigtige svar var", random_number + random_number2)
