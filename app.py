@@ -19,6 +19,8 @@ def CreateWindow1():
 
         SP.config(text=f"{random_number.get()} + {random_number2.get()}")
 
+        E1.delete(0, LP.END)
+
     random_number = LP.StringVar()
     random_number2 = LP.StringVar() 
 
@@ -40,10 +42,9 @@ def CreateWindow1():
 
     B1 = LP.Button(Add_Window1, text="Tjek", font=('Arial', 20), command=C1).pack(padx=10,pady=10)
     B2 = LP.Button(Add_Window1, text="Næste", font=('Arial', 20),command=RT).pack(padx=10,pady=10)
-
+    
     RT()
     
-   
 def CreateWindow2():
     Add_Window2 = LP.Toplevel()
     Add_Window2.title('Subtraktion')
