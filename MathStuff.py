@@ -31,3 +31,13 @@ print()
 
 print("slut")
 #test
+
+#print((0.0043%23052))
+
+
+
+#print(23052%0.0043)
+
+
+
+#print(5.5%2)
