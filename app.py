@@ -50,10 +50,82 @@ def CreateWindow2():
     Add_Window2.title('Subtraktion')
     Add_Window2.geometry("800x500")
 
+    def RT1():
+        # random number 1
+        random_number.set(random.randint(1, 20))
+        print("første nummer =", random_number)
+        # random number 2
+        random_number2.set(random.randint(1, 20))
+        print("anden nummer =", random_number2)
+
+        SP1.config(text=f"{random_number.get()} - {random_number2.get()}")
+
+        E2.delete(0, LP.END)
+
+    random_number = LP.StringVar()
+    random_number2 = LP.StringVar() 
+
+    SP1 = LP.Label(Add_Window2, text="", font=('Arial',44))
+    SP1.pack(padx=10,pady=20)
+
+    E2 = LP.Entry(Add_Window2,font=('Arial',44),width=8)
+    E2.pack(padx=10,pady=10)
+
+    def C2():
+        user_svar = int(E2.get())
+        print(user_svar)
+
+        if user_svar == int(random_number.get()) - int(random_number2.get()):
+            print("Det er rigtigt, Godt gået1")
+
+        else:
+            print("Svaret er forkert, det rigtige svar var", int(random_number.get()) - int(random_number2.get()))
+
+    B1 = LP.Button(Add_Window2, text="Tjek", font=('Arial', 20), command=C2).pack(padx=10,pady=10)
+    B2 = LP.Button(Add_Window2, text="Næste", font=('Arial', 20),command=RT1).pack(padx=10,pady=10)
+    
+    RT1()
+
 def CreateWindow3():
     Add_Window3 = LP.Toplevel()
     Add_Window3.title('Multoplikation')
     Add_Window3.geometry("800x500")
+
+    def RT2():
+        # random number 1
+        random_number.set(random.randint(1, 20))
+        print("første nummer =", random_number)
+        # random number 2
+        random_number2.set(random.randint(1, 20))
+        print("anden nummer =", random_number2)
+
+        SP2.config(text=f"{random_number.get()} * {random_number2.get()}")
+
+        E3.delete(0, LP.END)
+
+    random_number = LP.StringVar()
+    random_number2 = LP.StringVar() 
+
+    SP2 = LP.Label(Add_Window3, text="", font=('Arial',44))
+    SP2.pack(padx=10,pady=20)
+
+    E3 = LP.Entry(Add_Window3,font=('Arial',44),width=8)
+    E3.pack(padx=10,pady=10)
+
+    def C3():
+        user_svar = int(E3.get())
+        print(user_svar)
+
+        if user_svar == int(random_number.get()) * int(random_number2.get()):
+            print("Det er rigtigt, Godt gået1")
+
+        else:
+            print("Svaret er forkert, det rigtige svar var", int(random_number.get()) * int(random_number2.get()))
+
+    B1 = LP.Button(Add_Window3, text="Tjek", font=('Arial', 20), command=C3).pack(padx=10,pady=10)
+    B2 = LP.Button(Add_Window3, text="Næste", font=('Arial', 20),command=RT2).pack(padx=10,pady=10)
+    
+    RT2()
 
 class   LPapp:
 
