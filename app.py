@@ -60,8 +60,8 @@ def CreateWindow1():
             F1.pack(padx=10,pady=10)
             #print("Svaret er forkert, det rigtige svar var", int(random_number.get()) + int(random_number2.get()))
         
-    B1 = LP.Button(Add_Window1, text="Tjek", font=('Arial', 28), command=C1).pack(fill=BOTH)
-    B2 = LP.Button(Add_Window1, text="Næste", font=('Arial', 28),command=AddRandomTal).pack(fill=BOTH)
+    B1 = LP.Button(Add_Window1, text="Tjek", font=('Arial', 28), command=C1).pack()
+    B2 = LP.Button(Add_Window1, text="Næste", font=('Arial', 28),command=AddRandomTal).pack()
     
     AddRandomTal()
     
@@ -81,7 +81,7 @@ def CreateWindow2():
         SP1.config(text=f"{random_number.get()} - {random_number2.get()}")
 
         E2.delete(0, LP.END)
-        
+                        
 
     random_number = LP.StringVar()
     random_number2 = LP.StringVar() 
