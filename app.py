@@ -7,17 +7,19 @@ import random
 K1 = None
 F1 = None
 
-def CreateWindow1():
+def CreateWindow1(IV1Value,IV2Value):
     Add_Window1 = LP.Toplevel()
     Add_Window1.title('Addition')
     Add_Window1.geometry("800x500")
+    print(IV1Value)
+    print(IV2Value)
 
-    def AddRandomTal():
+    def RandomTal():
         global K1
         global F1
         
-        random_number.set(random.randint(1, 20))
-        random_number2.set(random.randint(1, 20))
+        random_number.set(random.randint(IV1Value, IV2Value))
+        random_number2.set(random.randint(IV1Value, IV2Value))
 
         #print("første nummer =", random_number)
         #print("anden nummer =", random_number2)
@@ -61,93 +63,131 @@ def CreateWindow1():
             #print("Svaret er forkert, det rigtige svar var", int(random_number.get()) + int(random_number2.get()))
         
     B1 = LP.Button(Add_Window1, text="Tjek", font=('Arial', 28), command=C1).pack()
-    B2 = LP.Button(Add_Window1, text="Næste", font=('Arial', 28),command=AddRandomTal).pack()
+    B2 = LP.Button(Add_Window1, text="Næste", font=('Arial', 28),command=RandomTal).pack()
     
-    AddRandomTal()
+    RandomTal()
     
-def CreateWindow2():
+def CreateWindow2(IV1Value,IV2Value):
     Add_Window2 = LP.Toplevel()
     Add_Window2.title('Subtraktion')
     Add_Window2.geometry("800x500")
 
-    def RT1():
-        # random number 1
-        random_number.set(random.randint(1, 20))
-        print("første nummer =", random_number)
-        # random number 2
-        random_number2.set(random.randint(1, 20))
-        print("anden nummer =", random_number2)
+    print(IV1Value)
+    print(IV2Value)
 
-        SP1.config(text=f"{random_number.get()} - {random_number2.get()}")
+    def RandomTal():
+        global K1
+        global F1
+        
+        random_number.set(random.randint(IV1Value, IV2Value))
+        random_number2.set(random.randint(IV1Value, IV2Value))
 
-        E2.delete(0, LP.END)
-                        
+        #print("første nummer =", random_number)
+        #print("anden nummer =", random_number2)
+
+        SP.config(text=f"{random_number.get()} - {random_number2.get()}")
+
+        E1.delete(0, LP.END)
+
+        if K1 is not None:
+            K1.destroy()
+        if F1 is not None:
+            F1.destroy()
 
     random_number = LP.StringVar()
-    random_number2 = LP.StringVar() 
+    random_number2 = LP.StringVar()
 
-    SP1 = LP.Label(Add_Window2, text="", font=('Arial',44))
-    SP1.pack(row=3)
+    SP = LP.Label(Add_Window2, text="", font=('Arial',80))
+    SP.pack(padx=10,pady=35)
 
-    E2 = LP.Entry(Add_Window2,font=('Arial',44),width=8)
-    E2.pack(padx=10,pady=10)
+    E1 = LP.Entry(Add_Window2,font=('Arial',44),width=8)
+    E1.pack(padx=10,pady=10)
 
-    def C2():
-        
-        user_svar = int(E2.get())
+    def C1():
+        global K1
+        global F1
+
+        user_svar = int(E1.get())
         print(user_svar)
 
         if user_svar == int(random_number.get()) - int(random_number2.get()):
-            print("Det er rigtigt, Godt gået1")
+            if F1 is not None:
+                F1.destroy()
+
+            K1 = LP.Label(Add_Window2, text="Korrekt, godt gået", font=('Arial',40))
+            K1.pack(padx=10,pady=10)
+            #print("Det er rigtigt, Godt gået1")
 
         else:
-            print("Svaret er forkert, det rigtige svar var", int(random_number.get()) - int(random_number2.get()))
-
-    B1 = LP.Button(Add_Window2, text="Tjek", font=('Arial', 20), command=C2).pack(padx=10,pady=10)
-    B2 = LP.Button(Add_Window2, text="Næste", font=('Arial', 20),command=RT1).pack(padx=10,pady=10)
+            F1 = LP.Label(Add_Window2, text=f"Forkert svar, det rigtige svar er {int(random_number.get()) - int(random_number2.get())}", font=('Arial',40))
+            F1.pack(padx=10,pady=10)
+            #print("Svaret er forkert, det rigtige svar var", int(random_number.get()) + int(random_number2.get()))
+        
+    B1 = LP.Button(Add_Window2, text="Tjek", font=('Arial', 28), command=C1).pack()
+    B2 = LP.Button(Add_Window2, text="Næste", font=('Arial', 28),command=RandomTal).pack()
     
-    RT1()
+    RandomTal()
 
-def CreateWindow3():
+def CreateWindow3(IV1Value,IV2Value):
     Add_Window3 = LP.Toplevel()
     Add_Window3.title('Multoplikation')
     Add_Window3.geometry("800x500")
 
-    def RT2():
-        # random number 1
-        random_number.set(random.randint(1, 20))
-        print("første nummer =", random_number)
-        # random number 2
-        random_number2.set(random.randint(1, 20))
-        print("anden nummer =", random_number2)
+    print(IV1Value)
+    print(IV2Value)
 
-        SP2.config(text=f"{random_number.get()} * {random_number2.get()}")
+    def RandomTal():
+        global K1
+        global F1
+        
+        random_number.set(random.randint(IV1Value, IV2Value))
+        random_number2.set(random.randint(IV1Value, IV2Value))
 
-        E3.delete(0, LP.END)
+        #print("første nummer =", random_number)
+        #print("anden nummer =", random_number2)
+
+        SP.config(text=f"{random_number.get()} * {random_number2.get()}")
+
+        E1.delete(0, LP.END)
+
+        if K1 is not None:
+            K1.destroy()
+        if F1 is not None:
+            F1.destroy()
 
     random_number = LP.StringVar()
-    random_number2 = LP.StringVar() 
+    random_number2 = LP.StringVar()
 
-    SP2 = LP.Label(Add_Window3, text="", font=('Arial',44))
-    SP2.pack(padx=10,pady=20)
+    SP = LP.Label(Add_Window3, text="", font=('Arial',80))
+    SP.pack(padx=10,pady=35)
 
-    E3 = LP.Entry(Add_Window3,font=('Arial',44),width=8)
-    E3.pack(padx=10,pady=10)
+    E1 = LP.Entry(Add_Window3,font=('Arial',44),width=8)
+    E1.pack(padx=10,pady=10)
 
-    def C3():
-        user_svar = int(E3.get())
+    def C1():
+        global K1
+        global F1
+
+        user_svar = int(E1.get())
         print(user_svar)
 
         if user_svar == int(random_number.get()) * int(random_number2.get()):
-            print("Det er rigtigt, Godt gået1")
+            if F1 is not None:
+                F1.destroy()
+
+            K1 = LP.Label(Add_Window3, text="Korrekt, godt gået", font=('Arial',40))
+            K1.pack(padx=10,pady=10)
+            #print("Det er rigtigt, Godt gået1")
 
         else:
-            print("Svaret er forkert, det rigtige svar var", int(random_number.get()) * int(random_number2.get()))
-
-    B1 = LP.Button(Add_Window3, text="Tjek", font=('Arial', 20), command=C3).pack(padx=10,pady=10)
-    B2 = LP.Button(Add_Window3, text="Næste", font=('Arial', 20),command=RT2).pack(padx=10,pady=10)
+            F1 = LP.Label(Add_Window3, text=f"Forkert svar, det rigtige svar er {int(random_number.get()) * int(random_number2.get())}", font=('Arial',40))
+            F1.pack(padx=10,pady=10)
+            #print("Svaret er forkert, det rigtige svar var", int(random_number.get()) + int(random_number2.get()))
+        
+    B1 = LP.Button(Add_Window3, text="Tjek", font=('Arial', 28), command=C1).pack()
+    B2 = LP.Button(Add_Window3, text="Næste", font=('Arial', 28),command=RandomTal).pack()
     
-    RT2()
+    RandomTal()
 
 class   LPapp:
 
@@ -168,19 +208,55 @@ class   LPapp:
         self.knapFrame.columnconfigure(0,weight=1)
         self.knapFrame.columnconfigure(1,weight=1)
         self.knapFrame.columnconfigure(2,weight=1)
+        self.knapFrame.columnconfigure(3,weight=1)
+        self.knapFrame.columnconfigure(4,weight=1)
         
-        self.knapAdd = LP.Button(self.knapFrame, text="Addition", width=10,font=('Arial',28), command = lambda: [CreateWindow1()])
+        self.knapAdd = LP.Button(self.knapFrame, text="Addition", width=10,font=('Arial',28), command = lambda: [self.IV1ValueGet(),self.IV2ValueGet(), CreateWindow1(self.IV1Value,self.IV2Value)])
         self.knapAdd.grid(row=0,column=0,padx=1)
 
-        self.knapMin = LP.Button(self.knapFrame, text="Subtraktion", width=10,font=('Arial',28),command = CreateWindow2)
+        self.knapMin = LP.Button(self.knapFrame, text="Subtraktion", width=10,font=('Arial',28),command = lambda: [self.IV1ValueGet(),self.IV2ValueGet(), CreateWindow2(self.IV1Value,self.IV2Value)])
         self.knapMin.grid(row=0,column=1,padx=1)
 
-        self.knapGan = LP.Button(self.knapFrame, text="Multiplikation", width=10,font=('Arial',28),command = CreateWindow3)
+        self.knapGan = LP.Button(self.knapFrame, text="Multiplikation", width=10,font=('Arial',28),command = lambda: [self.IV1ValueGet(),self.IV2ValueGet(), CreateWindow3(self.IV1Value,self.IV2Value)])
         self.knapGan.grid(row=0,column=2,padx=1)
 
         self.knapFrame.pack(padx=10,pady=20)
 
+        self.IVFrame = LP.Frame(self.root)
+        self.IVFrame.columnconfigure(0,weight=1)
+        self.IVFrame.columnconfigure(1,weight=1)
+        self.IVFrame.columnconfigure(2,weight=1)
+        self.IVFrame.columnconfigure(3,weight=1)
+        self.IVFrame.columnconfigure(4,weight=1)
+
+
+        self.IVTal = LP.Label(self.IVFrame, text="Indsæt tal", font=('Arial',20))
+        self.IVTal.grid(row=0,column=1,padx=1)
+
+        self.IV1Label = LP.Label(self.IVFrame, text="Min:", font=('Arial',20))
+        self.IV1Label.grid(row=1,column=0,padx=1)
+
+        self.IV1 = LP.Entry(self.IVFrame,font=('Arial',20),width=8)
+        self.IV1.grid(row=1,column=1,padx=1)
+
+
+        self.IV2Label = LP.Label(self.IVFrame, text="Maks:", font=('Arial',20))
+        self.IV2Label.grid(row=2,column=0,padx=1)
+
+        self.IV2 = LP.Entry(self.IVFrame,font=('Arial',20),width=8)
+        self.IV2.grid(row=2,column=1,padx=1)
+
+        self.IVFrame.pack(padx=10,pady=20)
+
+        
+
         self.root.mainloop() 
+
+    def IV1ValueGet(self):
+        self.IV1Value = int(self.IV1.get())
+
+    def IV2ValueGet(self):
+        self.IV2Value = int(self.IV2.get())
 
 LPapp()
 
