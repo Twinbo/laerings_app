@@ -10,7 +10,7 @@ F1 = None
 def CreateWindow1(IV1Value,IV2Value):
     Add_Window1 = LP.Toplevel()
     Add_Window1.title('Addition')
-    Add_Window1.geometry("800x500")
+    Add_Window1.geometry("800x600")
     print(IV1Value)
     print(IV2Value)
 
@@ -70,7 +70,7 @@ def CreateWindow1(IV1Value,IV2Value):
 def CreateWindow2(IV1Value,IV2Value):
     Add_Window2 = LP.Toplevel()
     Add_Window2.title('Subtraktion')
-    Add_Window2.geometry("800x500")
+    Add_Window2.geometry("800x600")
 
     print(IV1Value)
     print(IV2Value)
@@ -131,7 +131,7 @@ def CreateWindow2(IV1Value,IV2Value):
 def CreateWindow3(IV1Value,IV2Value):
     Add_Window3 = LP.Toplevel()
     Add_Window3.title('Multoplikation')
-    Add_Window3.geometry("800x500")
+    Add_Window3.geometry("800x600")
 
     print(IV1Value)
     print(IV2Value)
@@ -195,7 +195,7 @@ class   LPapp:
 
         self.root = LP.Tk()
 
-        self.root.geometry("800x500")
+        self.root.geometry("800x600")
         self.root.title("MatLæring")
 
         self.label1 = LP.Label(self.root, text="Matematik", font=('Arial',44))
@@ -208,8 +208,7 @@ class   LPapp:
         self.knapFrame.columnconfigure(0,weight=1)
         self.knapFrame.columnconfigure(1,weight=1)
         self.knapFrame.columnconfigure(2,weight=1)
-        self.knapFrame.columnconfigure(3,weight=1)
-        self.knapFrame.columnconfigure(4,weight=1)
+        
         
         self.knapAdd = LP.Button(self.knapFrame, text="Addition", width=10,font=('Arial',28), command = lambda: [self.IV1ValueGet(),self.IV2ValueGet(), CreateWindow1(self.IV1Value,self.IV2Value)])
         self.knapAdd.grid(row=0,column=0,padx=1)
@@ -226,8 +225,7 @@ class   LPapp:
         self.IVFrame.columnconfigure(0,weight=1)
         self.IVFrame.columnconfigure(1,weight=1)
         self.IVFrame.columnconfigure(2,weight=1)
-        self.IVFrame.columnconfigure(3,weight=1)
-        self.IVFrame.columnconfigure(4,weight=1)
+       
 
 
         self.IVTal = LP.Label(self.IVFrame, text="Indsæt tal", font=('Arial',20))
