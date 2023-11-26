@@ -231,14 +231,14 @@ class   LPapp:
         self.IVTal = LP.Label(self.IVFrame, text="Indsæt tal", font=('Arial',20))
         self.IVTal.grid(row=0,column=1,padx=1)
 
-        self.IV1Label = LP.Label(self.IVFrame, text="Min:", font=('Arial',20))
+        self.IV1Label = LP.Label(self.IVFrame, text="Mininum:", font=('Arial',20))
         self.IV1Label.grid(row=1,column=0,padx=1)
 
         self.IV1 = LP.Entry(self.IVFrame,font=('Arial',20),width=8)
         self.IV1.grid(row=1,column=1,padx=1)
 
 
-        self.IV2Label = LP.Label(self.IVFrame, text="Maks:", font=('Arial',20))
+        self.IV2Label = LP.Label(self.IVFrame, text="Maksimum:", font=('Arial',20))
         self.IV2Label.grid(row=2,column=0,padx=1)
 
         self.IV2 = LP.Entry(self.IVFrame,font=('Arial',20),width=8)
