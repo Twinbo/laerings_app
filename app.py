@@ -10,7 +10,7 @@ class   LPapp:
 
         self.root = LP.Tk()
 
-        self.root.geometry("800x450")
+        self.root.geometry("800x500")
         self.root.title("MatMA")
 
         self.label1 = LP.Label(self.root, text="MatMa - Matematik", font=('Arial',44))
@@ -72,7 +72,7 @@ class   LPapp:
     def hjaelp(self):
         HP = LP.Toplevel()
         HP.title('Hjælp')
-        HP.geometry("800x400")
+        HP.geometry("800x450")
 
         def LukWindow():
             HP.destroy()
@@ -108,7 +108,7 @@ class   LPapp:
     def CreateWindow1(self, IV1Value, IV2Value):
         Add_Window1 = LP.Toplevel()
         Add_Window1.title('Addition')
-        Add_Window1.geometry("800x500")
+        Add_Window1.geometry("800x600")
         print(IV1Value)
         print(IV2Value)
         
@@ -173,7 +173,7 @@ class   LPapp:
     def CreateWindow2(self,IV1Value,IV2Value):
         Add_Window2 = LP.Toplevel()
         Add_Window2.title('Subtraktion')
-        Add_Window2.geometry("800x500")
+        Add_Window2.geometry("800x600")
 
         print(IV1Value)
         print(IV2Value)
@@ -238,7 +238,7 @@ class   LPapp:
     def CreateWindow3(self, IV1Value, IV2Value):
         Add_Window3 = LP.Toplevel()
         Add_Window3.title('Multiplikation')
-        Add_Window3.geometry("800x500")
+        Add_Window3.geometry("800x600")
 
         print(IV1Value)
         print(IV2Value)
