@@ -1,5 +1,6 @@
-# MatMa - Matematisk læringsprogram
+# MatMa - Matematisk læringsprogram 
 
+## Åben app.py
 
 ## 1. Projektets formål og målgruppe: 
 
