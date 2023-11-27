@@ -26,7 +26,7 @@ Vores brugergrænseflade er meget simpel, vi har en hovedmenu og 3 undervinduer,
 
 Når man åbner programmet, møder man hovedmenuen, hvor man har fire muligheder. Addition, Subtraktion, Multiplikation og hjælp knapperne. Først starter man med at indsætte det laveste og højeste tal, man vil regne med. Efter vælger man kategorien af matematik som man har lyst til at lave. Når man er inde på f.eks. addition, får man et regnestykke givet med tal mellem ens laveste og højeste værdier, man indsatte i hovedmenuen. Når man indsætter sit gæt, kan man enten trykke ”Tjek” eller ENTER på tastaturet, for at tjekke om man har svaret korrekt. Efter kan man enten tryk næste og få et nyt regnestykke eller trykke på hovedmenuknappen, for at vende tilbage til hovedmenuen. Hvis man bliver i tvivl på nogen punkter, kan man trykke på ”Hjælp” knappen, og få en forklaring. 
 
-<img width="837" alt="image" src="https://github.com/Twinbo/laerings_app/assets/142223202/aaf1627e-e565-474c-8156-47bc6b9dc021">
+<img width="830" alt="image" src="https://github.com/Twinbo/laerings_app/assets/142223202/f0b11aa5-0a99-4240-95bf-15a5ad2aa9f8">
 
 ![image](https://github.com/Twinbo/laerings_app/assets/142223202/c72d8737-32b9-4308-9578-48fe2bea046f)
 
