@@ -1,10 +1,16 @@
-# MatMa - Matematisk læringsprogram
+# MatMa - Matematisk læringsprogram 
+
+## Åben app.py
 
 ## 1. Projektets formål og målgruppe: 
 
 Vores app henvender sig specifikt til begyndelsen af folkeskolen i vores mening er det omkring 0-4. Faget er matematik og vi gør det på en meget simpel metode. Ligesom man ofte har gjort i dansk, så sætter man i starten eller slutningen af timen cirka 10-30 minutter af til læsning. Vores ide prøver at gøre det samme med matematik, det giver ungerne en chance for lige at komme ind i spillet og vågne fra det tidligere frikvarter. Vores endelige formål/problem er at matematik kan virke meget uoverskueligt fordi ens hjerne ikke skifter så let fra fag til fag. Derfor vil vi komme med en mulighed som kunne løse det.
 
 ## 2. Benyttede designmønstre
+
+Vi havde misforstået hvordan design patterns fungeret, og vi fik talt med dig om det i timen d. 27 November. Vi forstod det som at f.eks. i command patternet,treode vi at man skulle bruge ```command=CreateWindow1```, til at kalde på metoder, vi havde lavede i vores class, når f.eks. en knap blev trykket på vores brugergrænseflade. 
+
+Command patterns går ud på at vi har en class som hedder command, hvor der er en execute metode. Så der der andre class, som f.eks. addition, som nedarvler fra command classen, og bruger execute. 
 
 Vi har brugt designmønstreret command patterns, hvor vi bruger command til at kalde på forskellige funktioner og, når en knap som for eksempel bliver trykket, skal den kalde på en specifik funktion. Et eksempel i vores kode, kan være når den skal tjekke om svaret er korrekt, kan man enten trykke på ”Tjek” knappen eller bruge ENTER tasten på ens tastatur. 
 Altså når f.eks. en knap bliver trykket på, kalder den på commanden, som så gør hvad den har fået instruks til.  
@@ -26,7 +32,7 @@ Vores brugergrænseflade er meget simpel, vi har en hovedmenu og 3 undervinduer,
 
 Når man åbner programmet, møder man hovedmenuen, hvor man har fire muligheder. Addition, Subtraktion, Multiplikation og hjælp knapperne. Først starter man med at indsætte det laveste og højeste tal, man vil regne med. Efter vælger man kategorien af matematik som man har lyst til at lave. Når man er inde på f.eks. addition, får man et regnestykke givet med tal mellem ens laveste og højeste værdier, man indsatte i hovedmenuen. Når man indsætter sit gæt, kan man enten trykke ”Tjek” eller ENTER på tastaturet, for at tjekke om man har svaret korrekt. Efter kan man enten tryk næste og få et nyt regnestykke eller trykke på hovedmenuknappen, for at vende tilbage til hovedmenuen. Hvis man bliver i tvivl på nogen punkter, kan man trykke på ”Hjælp” knappen, og få en forklaring. 
 
-<img width="837" alt="image" src="https://github.com/Twinbo/laerings_app/assets/142223202/aaf1627e-e565-474c-8156-47bc6b9dc021">
+
 
 ![image](https://github.com/Twinbo/laerings_app/assets/142223202/c72d8737-32b9-4308-9578-48fe2bea046f)
 
