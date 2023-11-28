@@ -63,7 +63,7 @@ class   LPapp:
 
         self.IVFrame.pack(padx=10,pady=20)
 
-        self.HP_Knap = LP.Button(self.root, text="Hjælp", font=('Arial', 12), command=self.hjaelp)
+        self.HP_Knap = LP.Button(self.root, text="Hjælp", font=('Arial', 16), command=self.hjaelp)
         self.HP_Knap.pack(side=BOTTOM,pady=5)
 
         self.root.mainloop() 
@@ -165,7 +165,7 @@ class   LPapp:
         def LukWindow():
             Add_Window1.destroy()
 
-        TilbageKnap = LP.Button(Add_Window1, text="Tilbage til hovedmenu", font=('Arial', 12), command=LukWindow)
+        TilbageKnap = LP.Button(Add_Window1, text="Tilbage til hovedmenu", font=('Arial', 18), command=LukWindow)
         TilbageKnap.pack(side=BOTTOM,pady=5)
 
         RandomTal()
@@ -230,7 +230,7 @@ class   LPapp:
         def LukWindow():
             Add_Window2.destroy()
 
-        TilbageKnap = LP.Button(Add_Window2, text="Tilbage til hovedmenu", font=('Arial', 12), command=LukWindow)
+        TilbageKnap = LP.Button(Add_Window2, text="Tilbage til hovedmenu", font=('Arial', 16), command=LukWindow)
         TilbageKnap.pack(side=BOTTOM,pady=5)
 
         RandomTal()
@@ -295,7 +295,7 @@ class   LPapp:
         def LukWindow():
             Add_Window3.destroy()
 
-        TilbageKnap = LP.Button(Add_Window3, text="Tilbage til hovedmenu", font=('Arial', 12), command=LukWindow)
+        TilbageKnap = LP.Button(Add_Window3, text="Tilbage til hovedmenu", font=('Arial', 16), command=LukWindow)
         TilbageKnap.pack(side=BOTTOM,pady=5)
 
         RandomTal()
